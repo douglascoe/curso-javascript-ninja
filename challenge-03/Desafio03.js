@@ -15,14 +15,16 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 */
 var pessoa = {
   nome: "Douglas",
-  sobrenome: "coe",
-  sexo: "Masc",
+  sobrenome: "Coe",
+  sexo: "Feminino",
   idade: 1,
   altura: 1.85,
   peso: 88,
   andando: false,
   caminhouQuantosMetros: 0
 };
+
+console.log("Pessoa: ", pessoa);
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
@@ -118,11 +120,15 @@ pessoa.altura;
 Faça a `pessoa` fazer 3 aniversários.
 */
 pessoa.fazerAniversario();
+pessoa.fazerAniversario();
+pessoa.fazerAniversario();
 
 // ou
 function comemora(numeroVezes) {
   pessoa.idade = pessoa.idade + numeroVezes;
 }
+
+comemora(3);
 
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
@@ -160,13 +166,13 @@ pessoa.andando;
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.caminhouQuantosMetros;
+console.log("Caminhou :", pessoa.caminhouQuantosMetros);
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
 Crie um método para o objeto `pessoa` chamado `apresentacao`. Esse método deve
 retornar a string:
-- "Olá, eu sou o [NOME COMPLETO], tenho [IDADE] anos, [ALTURA], meu peso é [PESO] e, 
+- "Olá, eu sou o [NOME COMPLETO], tenho [IDADE] anos, [ALTURA], meu peso é [PESO] e,
 só hoje, eu já caminhei [CAMINHOU QUANTOS METROS] metros!"
 
 Só que, antes de retornar a string, você vai fazer algumas validações:
@@ -226,4 +232,5 @@ pessoa.apresentacao = function() {
 };
 
 // Agora, apresente-se ;)
-pessoa.apresentacao();
+
+console.log("Apresentando pessoa: ", pessoa.apresentacao());
