@@ -1,13 +1,15 @@
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-function somadoisargumentos(a, b) {
+function somaDoisArgumentos(a, b) {
   return a + b;
 }
+console.log(somaDoisArgumentos(1, 2));
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-var valormascinco = somadoisargumentos(1, 2) + 5;
+
+var valorMaisCinco = somaDoisArgumentos(1, 2) + 5;
 
 // Qual o valor atualizado dessa variável?
-valormascinco;
+console.log(valorMaisCinco);
 
 // Declare uma nova variável, sem valor.
 var c;
@@ -17,16 +19,16 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function valoratual() {
+function valorAtual() {
   c = 3;
   return "O valor da variável agora é " + c;
 }
 
 // Invoque a função criada acima.
-valoratual();
+valorAtual();
 
 // Qual o retorno da função? (Use comentários de bloco).
-// 'O valor da variável agora é 3'
+console.log(valorAtual());
 
 /*
 Crie uma função com as seguintes características:
@@ -35,22 +37,21 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-function tresargumento(a, b, c) {
+function tresArgumento(a, b, c) {
   if (a === undefined || b === undefined || c === undefined) {
     return " Preencha todos os valores corretamente! ";
-  } else {
-    return a * b * c + 2;
   }
+  return a * b * c + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-tresargumento(1, 2);
+console.log(" tresArgumento(1, 2) : ", tresArgumento(1, 2));
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 // ' Preencha todos os valores corretamente! '
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-tresargumento(1, 2, 3);
+console.log("tresArgumento(1, 2, 3) : ", tresArgumento(1, 2, 3));
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 // 8
@@ -64,7 +65,7 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function tresargumentos(a, b, c) {
+function tresArgumentos(a, b, c) {
   if (a !== undefined && b === undefined && c === undefined) {
     return a;
   } else if (a !== undefined && b !== undefined && c === undefined) {
@@ -80,17 +81,17 @@ function tresargumentos(a, b, c) {
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 // com nenhum argumento
-tresargumentos();
+console.log("Não foi passado argumento : ", tresArgumentos());
 //false
 
 // com um argumento
-tresargumentos(1);
+tresArgumentos(1);
 //1
 
 //com dois argumento
-tresargumentos(1, 2);
+tresArgumentos(1, 2);
 //3
 
 //com três argumento
-tresargumentos(1, 2, 3);
+tresArgumentos(1, 2, 3);
 //1
