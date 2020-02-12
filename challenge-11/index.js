@@ -88,4 +88,4 @@ Mostrar no console os números do array.
     numbers.push(i);
   }
   console.log(numbers);
-});
+})();
